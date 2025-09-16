@@ -171,7 +171,8 @@ const Home = () => {
 
       {/* CTA Section */}
       <section className="relative py-20 overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-r from-blue-600/80 to-purple-600/80 liquid-glass-dark"></div>
+        <div className="absolute inset-0 bg-gradient-to-r from-blue-600/90 to-purple-600/90"></div>
+        <div className="absolute inset-0 liquid-glass-dark"></div>
         <div className="container mx-auto px-6 text-center relative z-10">
           <h2 className="text-4xl md:text-5xl font-bold mb-6 text-white">
             Ready to Transform Your Business?
@@ -191,7 +192,7 @@ const Home = () => {
       </section>
 
       {/* Footer */}
-      <footer className="relative liquid-glass-dark text-white py-16 border-t border-white/10">
+      <footer className="relative bg-slate-900/95 text-white py-16 border-t border-white/10">
         <div className="container mx-auto px-6">
           <div className="grid md:grid-cols-4 gap-8">
             <div>
