@@ -25,11 +25,11 @@ const Home = () => {
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-blue-50 via-white to-purple-50 relative overflow-hidden">
-      {/* Animated background elements for liquid glass effect */}
+      {/* Subtle background elements for depth */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
-        <div className="absolute -top-40 -right-40 w-96 h-96 bg-gradient-to-br from-blue-200/30 to-purple-200/30 rounded-full liquid-glass-float"></div>
-        <div className="absolute -bottom-40 -left-40 w-96 h-96 bg-gradient-to-br from-purple-200/30 to-pink-200/30 rounded-full liquid-glass-float" style={{animationDelay: '2s'}}></div>
-        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-72 h-72 bg-gradient-to-br from-cyan-200/20 to-blue-200/20 rounded-full liquid-glass-float" style={{animationDelay: '1s'}}></div>
+        <div className="absolute -top-40 -right-40 w-80 h-80 bg-gradient-to-br from-blue-100/20 to-purple-100/15 rounded-full liquid-glass-float"></div>
+        <div className="absolute -bottom-40 -left-40 w-80 h-80 bg-gradient-to-br from-purple-100/15 to-pink-100/10 rounded-full liquid-glass-float" style={{animationDelay: '2s'}}></div>
+        <div className="absolute top-1/3 left-1/4 w-60 h-60 bg-gradient-to-br from-cyan-100/10 to-blue-100/8 rounded-full liquid-glass-float" style={{animationDelay: '1s'}}></div>
       </div>
       {/* Header */}
       <header className="container mx-auto px-6 py-8 relative z-10">
