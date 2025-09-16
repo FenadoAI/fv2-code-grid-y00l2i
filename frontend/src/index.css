@@ -84,3 +84,302 @@ code {
     @apply bg-background text-foreground;
     }
 }
+
+/* Liquid Glass Effect CSS */
+@layer utilities {
+  /* Basic Liquid Glass Effect */
+  .liquid-glass {
+    position: relative;
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(16px) saturate(180%);
+    -webkit-backdrop-filter: blur(16px) saturate(180%);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    box-shadow:
+      0 8px 32px rgba(31, 38, 135, 0.15),
+      inset 0 2px 20px rgba(255, 255, 255, 0.2),
+      inset 0 -2px 20px rgba(0, 0, 0, 0.05);
+  }
+
+  .liquid-glass::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(
+      135deg,
+      rgba(255, 255, 255, 0.4) 0%,
+      rgba(255, 255, 255, 0.1) 50%,
+      rgba(255, 255, 255, 0.05) 100%
+    );
+    border-radius: inherit;
+    pointer-events: none;
+    opacity: 0.6;
+    z-index: 1;
+  }
+
+  .liquid-glass::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: inherit;
+    backdrop-filter: blur(1px);
+    -webkit-backdrop-filter: blur(1px);
+    box-shadow:
+      inset -10px -8px 0px -11px rgba(255, 255, 255, 0.8),
+      inset 0px -9px 0px -8px rgba(255, 255, 255, 0.6);
+    opacity: 0.4;
+    pointer-events: none;
+    z-index: -1;
+    filter: blur(0.5px) brightness(110%);
+  }
+
+  /* Enhanced Liquid Glass with more pronounced effect */
+  .liquid-glass-enhanced {
+    position: relative;
+    background: rgba(255, 255, 255, 0.12);
+    backdrop-filter: blur(20px) saturate(200%) brightness(110%);
+    -webkit-backdrop-filter: blur(20px) saturate(200%) brightness(110%);
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    box-shadow:
+      0 12px 40px rgba(31, 38, 135, 0.2),
+      inset 0 4px 24px rgba(255, 255, 255, 0.25),
+      inset 0 -4px 24px rgba(0, 0, 0, 0.08);
+  }
+
+  .liquid-glass-enhanced::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(
+      145deg,
+      rgba(255, 255, 255, 0.5) 0%,
+      rgba(255, 255, 255, 0.15) 30%,
+      rgba(255, 255, 255, 0.08) 70%,
+      rgba(255, 255, 255, 0.02) 100%
+    );
+    border-radius: inherit;
+    pointer-events: none;
+    opacity: 0.7;
+    z-index: 1;
+  }
+
+  .liquid-glass-enhanced::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(255, 255, 255, 0.08);
+    border-radius: inherit;
+    backdrop-filter: blur(2px);
+    -webkit-backdrop-filter: blur(2px);
+    box-shadow:
+      inset -12px -10px 0px -13px rgba(255, 255, 255, 1),
+      inset 0px -12px 0px -10px rgba(255, 255, 255, 0.8),
+      inset 12px 10px 0px -13px rgba(255, 255, 255, 0.3);
+    opacity: 0.5;
+    pointer-events: none;
+    z-index: -1;
+    filter: blur(1px) brightness(115%) contrast(105%);
+  }
+
+  /* Dark variant */
+  .liquid-glass-dark {
+    position: relative;
+    background: rgba(0, 0, 0, 0.15);
+    backdrop-filter: blur(16px) saturate(180%);
+    -webkit-backdrop-filter: blur(16px) saturate(180%);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow:
+      0 8px 32px rgba(0, 0, 0, 0.3),
+      inset 0 2px 20px rgba(255, 255, 255, 0.1),
+      inset 0 -2px 20px rgba(0, 0, 0, 0.2);
+  }
+
+  .liquid-glass-dark::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(
+      135deg,
+      rgba(255, 255, 255, 0.2) 0%,
+      rgba(255, 255, 255, 0.05) 50%,
+      rgba(255, 255, 255, 0.02) 100%
+    );
+    border-radius: inherit;
+    pointer-events: none;
+    opacity: 0.4;
+    z-index: 1;
+  }
+
+  /* Liquid Glass with subtle animation */
+  .liquid-glass-animated {
+    position: relative;
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(16px) saturate(180%);
+    -webkit-backdrop-filter: blur(16px) saturate(180%);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    box-shadow:
+      0 8px 32px rgba(31, 38, 135, 0.15),
+      inset 0 2px 20px rgba(255, 255, 255, 0.2);
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  .liquid-glass-animated::before {
+    content: '';
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    right: -2px;
+    bottom: -2px;
+    background: linear-gradient(
+      45deg,
+      rgba(255, 255, 255, 0.3),
+      rgba(255, 255, 255, 0.1),
+      rgba(255, 255, 255, 0.3)
+    );
+    border-radius: inherit;
+    pointer-events: none;
+    opacity: 0;
+    z-index: -1;
+    transition: opacity 0.3s ease;
+    animation: shimmer 3s ease-in-out infinite;
+  }
+
+  .liquid-glass-animated:hover::before {
+    opacity: 0.6;
+  }
+
+  .liquid-glass-animated:hover {
+    transform: translateY(-2px);
+    box-shadow:
+      0 16px 48px rgba(31, 38, 135, 0.25),
+      inset 0 4px 24px rgba(255, 255, 255, 0.3);
+  }
+
+  /* Liquid Glass for buttons */
+  .liquid-glass-button {
+    position: relative;
+    background: rgba(255, 255, 255, 0.18);
+    backdrop-filter: blur(12px) saturate(150%);
+    -webkit-backdrop-filter: blur(12px) saturate(150%);
+    border: 1px solid rgba(255, 255, 255, 0.35);
+    box-shadow:
+      0 6px 24px rgba(31, 38, 135, 0.12),
+      inset 0 1px 12px rgba(255, 255, 255, 0.25);
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    overflow: hidden;
+  }
+
+  .liquid-glass-button::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(
+      90deg,
+      transparent,
+      rgba(255, 255, 255, 0.4),
+      transparent
+    );
+    transition: left 0.6s ease;
+    z-index: 1;
+  }
+
+  .liquid-glass-button:hover::before {
+    left: 100%;
+  }
+
+  .liquid-glass-button:hover {
+    background: rgba(255, 255, 255, 0.25);
+    border-color: rgba(255, 255, 255, 0.4);
+    box-shadow:
+      0 8px 32px rgba(31, 38, 135, 0.18),
+      inset 0 2px 16px rgba(255, 255, 255, 0.35);
+  }
+
+  /* Utility classes */
+  .glass-content {
+    position: relative;
+    z-index: 2;
+  }
+
+  .glass-blur-light { backdrop-filter: blur(8px); -webkit-backdrop-filter: blur(8px); }
+  .glass-blur-medium { backdrop-filter: blur(16px); -webkit-backdrop-filter: blur(16px); }
+  .glass-blur-heavy { backdrop-filter: blur(24px); -webkit-backdrop-filter: blur(24px); }
+
+  /* Shimmer animation */
+  @keyframes shimmer {
+    0% {
+      background-position: -200% 0;
+    }
+    100% {
+      background-position: 200% 0;
+    }
+  }
+
+  /* Floating animation for enhanced effect */
+  @keyframes float {
+    0%, 100% {
+      transform: translateY(0px);
+    }
+    50% {
+      transform: translateY(-4px);
+    }
+  }
+
+  .liquid-glass-float {
+    animation: float 4s ease-in-out infinite;
+  }
+
+  /* Advanced liquid glass with edge effect */
+  .liquid-glass-edge {
+    position: relative;
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(16px) saturate(180%);
+    -webkit-backdrop-filter: blur(16px) saturate(180%);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    box-shadow:
+      0 8px 32px rgba(31, 38, 135, 0.15),
+      inset 0 2px 20px rgba(255, 255, 255, 0.2);
+  }
+
+  .liquid-glass-edge::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    height: 100%;
+    transform: translateY(100%);
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(8px) brightness(120%);
+    -webkit-backdrop-filter: blur(8px) brightness(120%);
+    pointer-events: none;
+    mask-image: linear-gradient(
+      to bottom,
+      black 0,
+      black 6px,
+      transparent 6px
+    );
+    -webkit-mask-image: linear-gradient(
+      to bottom,
+      black 0,
+      black 6px,
+      transparent 6px
+    );
+  }
+}
